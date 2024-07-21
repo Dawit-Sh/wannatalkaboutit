@@ -1,0 +1,83 @@
+  body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0;
+            transition: background 1s ease-in-out;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+        .container.hidden {
+            transform: scale(0.8);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .content.active {
+            display: block;
+            opacity: 1;
+        }
+        .breathing-exercise {
+            font-size: 1.5em;
+            animation: breathe 4s infinite;
+            margin: 20px 0;
+        }
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .forest-animation {
+            background: url('https://source.unsplash.com/1600x900/?forest') no-repeat center center/cover;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .mini-game, .reframe-thoughts, .suggestions, .questions, .helpline {
+            margin: 20px 0;
+        }
+        .stay-strong {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px 0;
+        }
+        @media (max-width: 600px) {
+            .btn {
+                padding: 10px;
+            }
+            .breathing-exercise {
+                font-size: 1.2em;
+            }
+        }
