@@ -1,0 +1,206 @@
+    * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4;
+            background-color: #121212;
+            background-image: url('https://i.pinimg.com/736x/15/c7/3d/15c73d61ce2c77b74e73b041309145aa.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .blur-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: backdrop-filter 0.5s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #f4f4f4;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: blur(3px);
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            filter: blur(0);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            color: #f4f4f4;
+        }
+
+        .card p {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover p {
+            opacity: 1;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            color: #f4f4f4;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #f4f4f4;
+        }
+
+        .join-community {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .join-community h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #f4f4f4;
+        }
+
+        .join-community form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .join-community input[type="text"] {
+            padding: 10px 15px;
+            width: 250px;
+            border: none;
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #f4f4f4;
+            font-size: 1rem;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .join-community input[type="text"]:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .join-community button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #f4f4f4;
+            transition: color 0.3s ease;
+        }
+
+        .join-community button:hover {
+            color: #0088cc;
+        }
+
+        .underline-link {
+            color: #f4f4f4;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .underline-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3498db;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        .underline-link:hover {
+            color: #3498db;
+        }
+
+        .underline-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+
+            .join-community form {
+                flex-direction: column;
+            }
+
+            .join-community input[type="text"] {
+                width: 100%;
+            }
+        }
+        
