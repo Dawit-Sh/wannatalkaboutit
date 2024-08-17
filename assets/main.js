@@ -76,13 +76,12 @@ function showPopup(topic) {
       content = `
                         <h2>Therapy Places in Ethiopia</h2>
                         <ul>
-                            <li><i class="fas fa-map-marker-alt"></i> Addis Ababa  - </li>
-                            <li><i class="fas fa-map-marker-alt"></i> Mekelle  - </li>
-                            <li><i class="fas fa-map-marker-alt"></i> Bahir Dar  - </li>
-                            <li><i class="fas fa-map-marker-alt"></i> Adama - </li>
-                            <li><i class="fas fa-map-marker-alt"></i> Dire Dawa  -</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Melkam Psychotherapy -  +25197 860 0038</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Abrhot Psychological Services - +251911998619</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Kal Psychological Services - +251904860086 </li>
+                            <li><i class="fas fa-map-marker-alt"></i> Sitota mental health care - +251113692818 / +251113692774 </li>
+                            <li><i class="fas fa-map-marker-alt"></i> EASE MindCare - +251911114952 / +251911006222 </li>
                         </ul>
-                        <p>Still In progress.</p>
                     `;
       break;
     case "movies":
