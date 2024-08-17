@@ -1,4 +1,4 @@
-    * {
+ * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -21,9 +21,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
             background-color: rgba(0, 0, 0, 0.5);
-            transition: backdrop-filter 0.5s ease;
+            transition: backdrop-filter 0.3s ease;
         }
 
         .container {
@@ -59,7 +59,7 @@
             text-align: center;
             cursor: pointer;
             transition: transform 0.3s ease, filter 0.3s ease;
-            filter: blur(3px);
+            filter: blur(2px);
             overflow: hidden;
         }
 
@@ -93,6 +93,12 @@
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .popup.show {
+            opacity: 1;
         }
 
         .popup-content {
@@ -103,6 +109,12 @@
             max-height: 80vh;
             overflow-y: auto;
             color: #f4f4f4;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .popup.show .popup-content {
+            transform: scale(1);
         }
 
         .close-btn {
@@ -123,29 +135,6 @@
             font-size: 1.5rem;
             margin-bottom: 20px;
             color: #f4f4f4;
-        }
-
-        .join-community form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .join-community input[type="text"] {
-            padding: 10px 15px;
-            width: 250px;
-            border: none;
-            border-radius: 25px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #f4f4f4;
-            font-size: 1rem;
-            outline: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .join-community input[type="text"]:focus {
-            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .join-community button {
@@ -190,9 +179,30 @@
             transform-origin: bottom left;
         }
 
+        .popup-content ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .popup-content li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .popup-content li i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
         @media (max-width: 768px) {
             .card {
                 width: 100%;
+                filter: blur(0);
+            }
+
+            .card p {
+                opacity: 1;
             }
 
             .join-community form {
@@ -202,5 +212,12 @@
             .join-community input[type="text"] {
                 width: 100%;
             }
+
+            .blur-overlay {
+                backdrop-filter: blur(3px);
+            }
+
+            header h1, header p {
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+            }
         }
-        

@@ -3,7 +3,10 @@ function showPopup(topic) {
   const popupText = document.getElementById("popup-text");
   const blurOverlay = document.querySelector(".blur-overlay");
   popup.style.display = "flex";
-  blurOverlay.style.backdropFilter = "blur(20px)";
+  setTimeout(() => {
+    popup.classList.add("show");
+  }, 10);
+  blurOverlay.style.backdropFilter = "blur(10px)";
 
   let content = "";
   switch (topic) {
@@ -73,11 +76,11 @@ function showPopup(topic) {
       content = `
                         <h2>Therapy Places in Ethiopia</h2>
                         <ul>
-                            <li>Addis Ababa  - </li>
-                            <li>Mekelle  - </li>
-                            <li>Bahir Dar  - </li>
-                            <li>Adama - </li>
-                            <li>Dire Dawa  -</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Addis Ababa  - </li>
+                            <li><i class="fas fa-map-marker-alt"></i> Mekelle  - </li>
+                            <li><i class="fas fa-map-marker-alt"></i> Bahir Dar  - </li>
+                            <li><i class="fas fa-map-marker-alt"></i> Adama - </li>
+                            <li><i class="fas fa-map-marker-alt"></i> Dire Dawa  -</li>
                         </ul>
                         <p>Still In progress.</p>
                     `;
@@ -86,11 +89,11 @@ function showPopup(topic) {
       content = `
                         <h2>Recommended Movies</h2>
                         <ul>
-                            <li>Inside Out (2015)</li>
-                            <li>A Beautiful Mind (2001)</li>
-                            <li>Good Will Hunting (1997)</li>
-                            <li>Silver Linings Playbook (2012)</li>
-                            <li>It's Kind of a Funny Story (2010)</li>
+                            <li><i class="fas fa-film"></i> Inside Out (2015)</li>
+                            <li><i class="fas fa-film"></i> A Beautiful Mind (2001)</li>
+                            <li><i class="fas fa-film"></i> Good Will Hunting (1997)</li>
+                            <li><i class="fas fa-film"></i> Silver Linings Playbook (2012)</li>
+                            <li><i class="fas fa-film"></i> It's Kind of a Funny Story (2010)</li>
                         </ul>
                     `;
       break;
@@ -98,12 +101,12 @@ function showPopup(topic) {
       content = `
                         <h2>Recommended Books</h2>
                         <ul>
-                            <li>"Feeling Good: The New Mood Therapy" by David D. Burns</li>
-                            <li>"The Happiness Trap" by Russ Harris</li>
-                            <li>"Lost Connections" by Johann Hari</li>
-                            <li>"Man's Search for Meaning" by Viktor E. Frankl</li>
-                            <li>"The Body Keeps the Score" by Bessel van der Kolk</li>
-                            <li>"Reasons to Stay Alive" by Matt Haig</li>
+                            <li><i class="fas fa-book"></i> "Feeling Good: The New Mood Therapy" by David D. Burns</li>
+                            <li><i class="fas fa-book"></i> "The Happiness Trap" by Russ Harris</li>
+                            <li><i class="fas fa-book"></i> "Lost Connections" by Johann Hari</li>
+                            <li><i class="fas fa-book"></i> "Man's Search for Meaning" by Viktor E. Frankl</li>
+                            <li><i class="fas fa-book"></i> "The Body Keeps the Score" by Bessel van der Kolk</li>
+                            <li><i class="fas fa-book"></i> "Reasons to Stay Alive" by Matt Haig</li>
                         </ul>
                     `;
       break;
@@ -111,11 +114,11 @@ function showPopup(topic) {
       content = `
                         <h2>Recommended Podcasts</h2>
                         <ul>
-                            <li><a href="https://www.youtube.com/watch?v=Xu1FMCxoEFc&t=6s&pp=ygUaYW5kcmV3IGh1YmVybWFuIGRlcHJlc3Npb24%3D" class="underline-link" target="_blank">Understanding & Conquering Depression with Dr. Andrew Huberman</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=ntfcfJ28eiU" class="underline-link" target="_blank">Tools for Managing Stress & Anxiety with Dr. Andrew Huberman</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=QoZTww2xnbM" class="underline-link" target="_blank">A Message to Someone With Suicidal Thoughts with Dr. Jordan b. peterson</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=WTNjc8HyOaE" class="underline-link" target="_blank"> Joe Rogan Experience #2109 - Abigail Shrier </a></li>
-                            <li><a href="https://www.youtube.com/watch?v=TVgQ_tgWMyU" class="underline-link" target="_blank">How to recover from depression with Dr Michael Yapko</a></li>
+                            <li><i class="fas fa-podcast"></i> <a href="https://www.youtube.com/watch?v=Xu1FMCxoEFc&t=6s&pp=ygUaYW5kcmV3IGh1YmVybWFuIGRlcHJlc3Npb24%3D" class="underline-link" target="_blank">Understanding & Conquering Depression with Dr. Andrew Huberman</a></li>
+                            <li><i class="fas fa-podcast"></i> <a href="https://www.youtube.com/watch?v=ntfcfJ28eiU" class="underline-link" target="_blank">Tools for Managing Stress & Anxiety with Dr. Andrew Huberman</a></li>
+                            <li><i class="fas fa-podcast"></i> <a href="https://www.youtube.com/watch?v=QoZTww2xnbM" class="underline-link" target="_blank">A Message to Someone With Suicidal Thoughts with Dr. Jordan b. peterson</a></li>
+                            <li><i class="fas fa-podcast"></i> <a href="https://www.youtube.com/watch?v=WTNjc8HyOaE" class="underline-link" target="_blank"> Joe Rogan Experience #2109 - Abigail Shrier </a></li>
+                            <li><i class="fas fa-podcast"></i> <a href="https://www.youtube.com/watch?v=TVgQ_tgWMyU" class="underline-link" target="_blank">How to recover from depression with Dr Michael Yapko</a></li>
                         </ul>
                     `;
       break;
@@ -124,9 +127,9 @@ function showPopup(topic) {
                         <h2>Helpful Mobile Apps</h2>
                         <h3>For iOS and Android:</h3>
                         <ul>
-                            <li>Headspace (Meditation and mindfulness)</li>
-                            <li>Day One (Depression and anxiety)</li>
-                            <li>Daylio (Mood Tracker)</li>
+                            <li><i class="fas fa-mobile-alt"></i> Headspace (Meditation and mindfulness)</li>
+                            <li><i class="fas fa-mobile-alt"></i> Day One (Depression and anxiety)</li>
+                            <li><i class="fas fa-mobile-alt"></i> Daylio (Mood Tracker)</li>
                         </ul>
                     `;
       break;
@@ -137,8 +140,11 @@ function showPopup(topic) {
 function closePopup() {
   const popup = document.getElementById("popup");
   const blurOverlay = document.querySelector(".blur-overlay");
-  popup.style.display = "none";
-  blurOverlay.style.backdropFilter = "blur(10px)";
+  popup.classList.remove("show");
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 300);
+  blurOverlay.style.backdropFilter = "blur(5px)";
 }
 
 function joinTelegram(event) {
