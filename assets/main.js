@@ -81,6 +81,7 @@ function showPopup(topic) {
                             <li><i class="fas fa-map-marker-alt"></i> Kal Psychological Services - +251904860086 </li>
                             <li><i class="fas fa-map-marker-alt"></i> Sitota mental health care - +251113692818 / +251113692774 </li>
                             <li><i class="fas fa-map-marker-alt"></i> EASE MindCare - +251911114952 / +251911006222 </li>
+                            <li><i class="fas fa-map-marker-alt"></i> Lebeza psychiatry consultation - +251 118 352929 </li>
                         </ul>
                     `;
       break;
